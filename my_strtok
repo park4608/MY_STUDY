@@ -1,0 +1,26 @@
+```c
+#include <stdio.h>
+
+
+void my_strtok(char *str, char *delimiters);
+
+int main()
+{
+	char str1[100] = "aabaabaa";//분리할 문자열
+	char delim[50] = "b";//기준 문자열
+	my_strtok(str1, delim);
+}
+
+void my_strtok(char *str,char *const delimiters)
+{
+	while (*str != NULL)
+	{
+		if (*str != *delimiters)
+			printf("%c", *str);
+		else
+			printf("\n");
+		str++;
+	}
+	printf("\n");
+}
+```
